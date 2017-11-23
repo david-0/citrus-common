@@ -1,0 +1,12 @@
+export { IAddress } from "./lib/interfaces/IAddress";
+export { IArticle } from "./lib/interfaces/IArticle";
+export { IDelivery } from "./lib/interfaces/IDelivery";
+export { IGpsLocation } from "./lib/interfaces/IGpsLocation";
+export { IId } from "./lib/interfaces/IId";
+export { IOrder } from "./lib/interfaces/IOrder";
+export { IOrderItem } from "./lib/interfaces/IOrderItem";
+export { IPickupLocation } from "./lib/interfaces/IPickupLocation";
+export { IRole } from "./lib/interfaces/IRole";
+export { IShipment } from "./lib/interfaces/IShipment";
+export { IShipmentItem } from "./lib/interfaces/IShipmentItem";
+export { IUser } from "./lib/interfaces/IUser";
