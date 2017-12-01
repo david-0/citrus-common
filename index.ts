@@ -9,4 +9,5 @@ export {IPickupLocation} from "./lib/interfaces/IPickupLocation";
 export {IRole} from "./lib/interfaces/IRole";
 export {IShipment} from "./lib/interfaces/IShipment";
 export {IShipmentItem} from "./lib/interfaces/IShipmentItem";
-export {IUser} from "./lib/interfaces/IUser";
+export {IApplicationUser} from "./lib/interfaces/IApplicationUser";
+export {IUserDetails} from "./lib/interfaces/IUserDetails";

@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import {IGpsLocation} from "./IGpsLocation";
 import {IId} from "./IId";
 

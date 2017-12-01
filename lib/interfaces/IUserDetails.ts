@@ -1,8 +1,7 @@
 import {IId} from "./IId";
 
-export interface IUser extends IId {
+export interface IUserDetails extends IId {
   email: string;
-  password: string;
   name: string;
   prename: string;
   telNumber: string;
