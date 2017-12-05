@@ -3,7 +3,7 @@ import {IId} from "./IId";
 import {IPricedArticle} from "./IPricedArticle";
 
 export interface ICustomerOrderItem extends IId {
-  order: ICustomerOrder;
-  article: IPricedArticle;
+  customerOrder: ICustomerOrder;
+  pricedArticle: IPricedArticle;
   quantity: number;
 }

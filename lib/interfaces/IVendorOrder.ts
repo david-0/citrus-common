@@ -6,5 +6,5 @@ export interface IVendorOrder extends IId {
   comment: string;
   arrivalDate: Date;
   saleDate: Date;
-  items: IVendorOrderItem[];
+  vendorOrderItems: IVendorOrderItem[];
 }

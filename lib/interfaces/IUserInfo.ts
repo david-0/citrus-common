@@ -1,4 +1,5 @@
 import {IAddress} from "./IAddress";
+import {ICustomerOrder} from "./ICustomerOrder";
 import {IId} from "./IId";
 
 export interface IUserInfo extends IId {
@@ -8,4 +9,5 @@ export interface IUserInfo extends IId {
   phone: string;
   mobile: string;
   addresses: IAddress[];
+  orders: ICustomerOrder[];
 }

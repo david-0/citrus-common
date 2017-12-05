@@ -1,6 +1,7 @@
 import {IArticle} from "./IArticle";
 
 export interface IUnitOfMeasurement {
-  name: string;
+  shortcut: string;
+  description: string;
   articles: IArticle[];
 }
