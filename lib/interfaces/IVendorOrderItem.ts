@@ -3,7 +3,7 @@ import {IVendorOrder} from "./IVendorOrder";
 import {IArticle} from "./IArticle";
 
 export interface IVendorOrderItem extends IId {
-  shipment: IVendorOrder;
+  vendorOrder: IVendorOrder;
   article: IArticle;
   orderedQuantity: number;
   useableQuantity: number;
