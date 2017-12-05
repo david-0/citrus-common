@@ -1,12 +1,11 @@
 import {IAddress} from "./IAddress";
-import {IDelivery} from "./IDelivery";
+import {IArticle} from "./IArticle";
 import {IId} from "./IId";
-import {IApplicationUser} from "./IApplicationUser";
+import {IOpeningHours} from "./IOpeningHours";
 
 export interface IPickupLocation extends IId {
-  delivery: IDelivery;
-  fromDate: Date;
-  toDate: Date;
-  contactUser: IApplicationUser;
   address: IAddress;
+  availableArticles: IArticle[];
+  allArticles: boolean;
+  openingHours: IOpeningHours[];
 }

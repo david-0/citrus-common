@@ -1,13 +1,14 @@
-import {IDelivery} from "./IDelivery";
+import {EArticleStatus} from "./EArticleStatus";
 import {IId} from "./IId";
-import {IShipmentItem} from "./IShipmentItem";
+import {IUnitOfMeasurement} from "./IUnitOfMeasurement";
+import {IVendorOrderItem} from "./IVendorOrderItem";
 
 export interface IArticle extends IId {
-  number: number;
+  number: number;  // readonly
   description: string;
-  price: number;
-  amount: number;
+  stock: number;
+  unitOfMeasurement: IUnitOfMeasurement;
+  status: EArticleStatus;
   visibleFrom: Date;
-  delivery: IDelivery;
-  shipmentItems: IShipmentItem[];
+  shipmentItems: IVendorOrderItem[];
 }
