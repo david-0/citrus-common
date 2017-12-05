@@ -1,3 +1,4 @@
+import {IAddress} from "./IAddress";
 import {IId} from "./IId";
 
 export interface IUserInfo extends IId {
@@ -6,4 +7,5 @@ export interface IUserInfo extends IId {
   prename: string;
   phone: string;
   mobile: string;
+  addresses: IAddress[];
 }

@@ -1,12 +1,5 @@
-import {IAddress} from "./IAddress";
-import {IId} from "./IId";
+import {IUserInfo} from "./IUserInfo";
 
-export interface IUser extends IId {
-  email: string;
+export interface IUser extends IUserInfo {
   password: string;
-  name: string;
-  prename: string;
-  phone: string;
-  mobile: string;
-  addresses: IAddress[];
 }
