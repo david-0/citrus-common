@@ -9,5 +9,5 @@ export interface IUserInfo extends IId {
   phone: string;
   mobile: string;
   addresses: IAddress[];
-  orders: ICustomerOrder[];
+  customerOrders: ICustomerOrder[];
 }
