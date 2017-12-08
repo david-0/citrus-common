@@ -15,3 +15,5 @@ export {IUser} from "./lib/interfaces/IUser";
 export {IUserInfo} from "./lib/interfaces/IUserInfo";
 export {IVendorOrder} from "./lib/interfaces/IVendorOrder";
 export {IVendorOrderItem} from "./lib/interfaces/IVendorOrderItem";
+export {IOrderDefinitions} from "./lib/interfaces/IOrderDefinitions"
+export {IOrderDefinition} from "./lib/interfaces/IOrderDefinition"
