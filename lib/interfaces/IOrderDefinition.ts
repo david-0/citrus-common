@@ -1,4 +1,4 @@
 export interface IOrderDefinition {
   columnName: string;
-  direction: string;
+  direction: 'asc' | 'desc';
 }
