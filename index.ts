@@ -17,3 +17,4 @@ export {IVendorOrder} from "./lib/interfaces/IVendorOrder";
 export {IVendorOrderItem} from "./lib/interfaces/IVendorOrderItem";
 export {IOrderDefinitions} from "./lib/interfaces/IOrderDefinitions"
 export {IOrderDefinition} from "./lib/interfaces/IOrderDefinition"
+export {IWhereDefinition} from "./lib/interfaces/IWhereDefinition"
