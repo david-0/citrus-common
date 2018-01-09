@@ -4,6 +4,7 @@ import {IRequestField} from "./i-request-field";
 
 export interface IRequest<T> {
   type: typeof Object;
+  typeName: string;
   includedFields?: IRequestField[];
   conditions?: IRequestCondition<T>[];
   order?: IOrderDefinition[];
