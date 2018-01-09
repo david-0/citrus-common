@@ -15,6 +15,9 @@ export {IUser} from "./lib/interfaces/IUser";
 export {IUserInfo} from "./lib/interfaces/IUserInfo";
 export {IVendorOrder} from "./lib/interfaces/IVendorOrder";
 export {IVendorOrderItem} from "./lib/interfaces/IVendorOrderItem";
-export {IOrderDefinitions} from "./lib/interfaces/IOrderDefinitions"
-export {IOrderDefinition} from "./lib/interfaces/IOrderDefinition"
-export {IWhereDefinition} from "./lib/interfaces/IWhereDefinition"
+export {IOrderDefinitions} from "./lib/interfaces/IOrderDefinitions";
+export {IOrderDefinition} from "./lib/interfaces/request/i-order-definition";
+export {IRequest} from "./lib/interfaces/request/i-request";
+export {IRequestField} from "./lib/interfaces/request/i-request-field";
+export {IRequestCondition} from "./lib/interfaces/request/i-request-condition";
+export {IWhereDefinition} from "./lib/interfaces/IWhereDefinition";
