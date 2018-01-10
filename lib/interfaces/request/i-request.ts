@@ -9,4 +9,8 @@ export interface IRequest {
   order?: IOrderDefinition[];
   limit?: number;
   offset?: number;
+
+  hasCondition(): boolean;
+
+  hasCondition(request: IRequestField): boolean;
 }
