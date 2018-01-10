@@ -12,5 +12,5 @@ export interface IRequest {
 
   hasCondition(): boolean;
 
-  isSubRequest(request: IRequestField): boolean;
+  isSubRequest(request: IRequest): boolean;
 }
