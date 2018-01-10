@@ -1,5 +1,5 @@
-export interface IRequestCondition<C> {
-  match(item: C): boolean;
+export interface IRequestCondition {
+  match(item: any): boolean;
   matchId(id: number): boolean;
   isRangeCondition(): boolean;
 }
