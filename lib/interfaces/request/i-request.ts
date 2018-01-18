@@ -5,12 +5,10 @@ import {IRequestField} from "./i-request-field";
 export interface IRequest {
   typeName: string;
   includedFields?: IRequestField[];
-  conditions?: IRequestCondition[];
+  condition?: IRequestCondition;
   order?: IOrderDefinition[];
   limit?: number;
   offset?: number;
-
-  hasCondition(): boolean;
 
   isSubRequest(request: IRequest): boolean;
 }
