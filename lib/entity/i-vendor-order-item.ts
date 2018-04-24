@@ -1,6 +1,6 @@
-import {IId} from "./IId";
-import {IVendorOrder} from "./IVendorOrder";
-import {IArticle} from "./IArticle";
+import {IId} from "./i-id";
+import {IVendorOrder} from "./i-vendor-order";
+import {IArticle} from "./i-article";
 
 export interface IVendorOrderItem extends IId {
   vendorOrder: IVendorOrder;

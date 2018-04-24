@@ -1,4 +1,4 @@
-import {IOrderDefinition} from "./i-order-definition";
+import {IOrderDefinition} from "./IOrderDefinition";
 import {IRequestCondition} from "./i-request-condition";
 import {IRequestField} from "./i-request-field";
 

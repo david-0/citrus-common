@@ -1,4 +1,4 @@
-import {IOrderDefinition} from "./request/i-order-definition";
+import {IOrderDefinition} from "./IOrderDefinition";
 
 export interface IOrderDefinitions {
   definitions: IOrderDefinition[];

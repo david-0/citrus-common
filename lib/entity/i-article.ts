@@ -1,9 +1,9 @@
-import {EArticleStatus} from "./EArticleStatus";
-import {IId} from "./IId";
-import {IPickupLocation} from "./IPickupLocation";
-import {IPricedArticle} from "./IPricedArticle";
-import {IUnitOfMeasurement} from "./IUnitOfMeasurement";
-import {IVendorOrderItem} from "./IVendorOrderItem";
+import {EArticleStatus} from "./e-article-status";
+import {IId} from "./i-id";
+import {IPickupLocation} from "./i-pickup-location";
+import {IPricedArticle} from "./i-priced-article";
+import {IUnitOfMeasurement} from "./i-unit-of-measurement";
+import {IVendorOrderItem} from "./i-vendor-order-item";
 
 export interface IArticle extends IId {
   number: number;  // readonly

@@ -1,6 +1,6 @@
-import {IArticle} from "./IArticle";
-import {ICustomerOrderItem} from "./ICustomerOrderItem";
-import {IId} from "./IId";
+import {IArticle} from "./i-article";
+import {ICustomerOrderItem} from "./i-customer-order-item";
+import {IId} from "./i-id";
 
 export interface IPricedArticle extends IId {
   article: IArticle,

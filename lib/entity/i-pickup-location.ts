@@ -1,7 +1,7 @@
-import {IAddress} from "./IAddress";
-import {IArticle} from "./IArticle";
-import {IId} from "./IId";
-import {IOpeningHours} from "./IOpeningHours";
+import {IAddress} from "./i-address";
+import {IArticle} from "./i-article";
+import {IId} from "./i-id";
+import {IOpeningHours} from "./i-opening-hours";
 
 export interface IPickupLocation extends IId {
   address: IAddress;

@@ -1,6 +1,6 @@
-import {IGpsLocation} from "./IGpsLocation";
-import {IId} from "./IId";
-import {IUser} from "./IUser";
+import {IGpsLocation} from "./i-gps-location";
+import {IId} from "./i-id";
+import {IUser} from "./i-user";
 
 export interface IAddress extends IId {
   user: IUser;

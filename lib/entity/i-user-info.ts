@@ -1,6 +1,6 @@
-import {IAddress} from "./IAddress";
-import {ICustomerOrder} from "./ICustomerOrder";
-import {IId} from "./IId";
+import {IAddress} from "./i-address";
+import {ICustomerOrder} from "./i-customer-order";
+import {IId} from "./i-id";
 
 export interface IUserInfo extends IId {
   number: number;

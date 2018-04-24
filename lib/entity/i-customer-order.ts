@@ -1,7 +1,7 @@
-import {IBulkOrder} from "./IBulkOrder";
-import {IId} from "./IId";
-import {ICustomerOrderItem} from "./ICustomerOrderItem";
-import {IUser} from "./IUser";
+import {IBulkOrder} from "./i-bulk-order";
+import {IId} from "./i-id";
+import {ICustomerOrderItem} from "./i-customer-order-item";
+import {IUser} from "./i-user";
 
 export interface ICustomerOrder extends IId {
   number: number;
