@@ -1,4 +1,4 @@
-export {IId} from "./lib/entity/i-id";
+/* export {IId} from "./lib/entity/i-id";
 export {EArticleStatus} from "./lib/entity/e-article-status";
 export {IAddress} from "./lib/entity/i-address";
 export {IArticle} from "./lib/entity/i-article";
@@ -13,8 +13,7 @@ export {IRole} from "./lib/entity/i-role";
 export {IUnitOfMeasurement} from "./lib/entity/i-unit-of-measurement";
 export {IUser} from "./lib/entity/i-user";
 export {IUserInfo} from "./lib/entity/i-user-info";
-export {IVendorOrder} from "./lib/entity/i-vendor-order";
-export {IVendorOrderItem} from "./lib/entity/i-vendor-order-item";
+export {IVendorOrder} from "./lib/entity/i-vendor-order";*/
 
 export {IOrderDefinitions} from "./lib/request/i-order-definitions";
 export {IOrderDefinition} from "./lib/request/IOrderDefinition";
@@ -23,9 +22,12 @@ export {IRequestField} from "./lib/request/i-request-field";
 export {IRequestCondition} from "./lib/request/i-request-condition";
 export {IWhereDefinition} from "./lib/request/i-where-definition";
 
-export {DtoId} from "./lib/dto/dto-id";
-export {DtoUser} from "./lib/dto/dto-user";
-export {DtoUserInfo} from "./lib/dto/dto-user-info";
-export {DtoUserInfoWithAddresses} from "./lib/dto/dto-user-info-with-addresses";
-export {DtoAddress} from "./lib/dto/dto-address";
-export {DtoAddressWithUserInfo} from "./lib/dto/dto-address-with-user-info";
+/* export {DtoId} from "./lib/dto-old/dto-id";
+export {DtoUser} from "./lib/dto-old/dto-user";
+export {DtoUserInfo} from "./lib/dto-old/dto-user-info";
+export {DtoUserInfoWithAddresses} from "./lib/dto-old/dto-user-info-with-addresses";
+export {DtoAddress} from "./lib/dto-old/dto-address";
+export {DtoAddressWithUserInfo} from "./lib/dto-old/dto-address-with-user-info";*/
+
+export {UserInfoDto} from "./lib/dto/user-info-dto";
+export {AddressDto} from "./lib/dto/address-dto";

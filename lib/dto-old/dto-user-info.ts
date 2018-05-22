@@ -7,6 +7,6 @@ export interface DtoUserInfo extends DtoId {
   prename: string;
   phone: string;
   mobile: string;
-  addressesIds: DtoId[];
-  customerOrders: DtoId[];
+  addressIds: DtoId[];
+  customerOrderIds: DtoId[];
 }
