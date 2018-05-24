@@ -1,4 +1,6 @@
-export class AddressDto{
+import {DtoId} from "../dto/dto-id";
+
+export class AddressDto implements DtoId{
 
   public id: number;
   public userId: number;

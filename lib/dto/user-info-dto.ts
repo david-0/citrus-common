@@ -1,4 +1,6 @@
-export class UserInfoDto {
+import {DtoId} from "./dto-id";
+
+export class UserInfoDto implements  DtoId{
 
   public id: number;
   public number: number;
