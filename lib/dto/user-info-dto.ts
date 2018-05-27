@@ -2,7 +2,7 @@ import {DtoId} from "./dto-id";
 
 export class UserInfoDto implements  DtoId{
 
-  public id: number;
+  public id?: number;
   public number: number;
   public email: string;
   public name: string;
@@ -26,21 +26,6 @@ export class UserInfoDto implements  DtoId{
 
   public static createEmpty(): UserInfoDto {
     return new UserInfoDto({
-      id: -1,
-      number: -1,
-      email: "",
-      name: "",
-      prename: "",
-      phone: "",
-      mobile: "",
-      customerOrderIds: [],
-      addressIds: []
-    });
-  }
-
-  public static createEmptyUser(): UserInfoDto {
-    return ({
-      id: -1,
       number: -1,
       email: "",
       name: "",

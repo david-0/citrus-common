@@ -1,9 +1,11 @@
 import {DtoId} from "../dto/dto-id";
+import {UserInfoDto} from "./user-info-dto";
 
 export class AddressDto implements DtoId{
 
-  public id: number;
-  public userId: number;
+  public id?: number;
+  public userId?: number;
+  public user?: UserInfoDto;
   public description: string;
   public name: string;
   public prename: string;
@@ -12,11 +14,12 @@ export class AddressDto implements DtoId{
   public addition: string;
   public zipcode: string;
   public city: string;
-  public gpsLocationId: number;
+  public gpsLocationId?: number;
 
   constructor(address: AddressDto) {
     this.id = address.id;
     this.userId = address.userId;
+    this.user = address.user;
     this.description = address.description;
     this.name = address.name;
     this.prename = address.prename;
@@ -30,8 +33,7 @@ export class AddressDto implements DtoId{
 
   public static createEmpty(): AddressDto {
     return new AddressDto({
-      id: -1,
-      userId: -1,
+      user: UserInfoDto.createEmpty(),
       description: "",
       name: "",
       prename: "",
@@ -40,7 +42,6 @@ export class AddressDto implements DtoId{
       addition: "",
       zipcode: "",
       city: "",
-      gpsLocationId: -1
     });
   }
 
