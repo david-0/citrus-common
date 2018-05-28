@@ -31,3 +31,5 @@ export {DtoAddressWithUserInfo} from "./lib/dto-old/dto-address-with-user-info";
 
 export {UserInfoDto} from "./lib/dto/user-info-dto";
 export {AddressDto} from "./lib/dto/address-dto";
+export {UnitOfMeasurementDto} from "./lib/dto/unit-of-measurement-dto";
+export {ArticleDto} from "./lib/dto/article-dto";

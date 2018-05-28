@@ -45,7 +45,7 @@ export class AddressDto implements DtoId{
     });
   }
 
-  static createAddressWithId(id: number, address: AddressDto): AddressDto {
+  static createWithId(id: number, address: AddressDto): AddressDto {
     const to = new AddressDto(address);
     to.id = id;
     return to;

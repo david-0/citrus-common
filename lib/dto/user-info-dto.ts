@@ -37,7 +37,7 @@ export class UserInfoDto implements  DtoId{
     });
   }
 
-  static createUserInfoWithId(id: number, userInfo: UserInfoDto): UserInfoDto {
+  static createWithId(id: number, userInfo: UserInfoDto): UserInfoDto {
     const to = new UserInfoDto(userInfo);
     to.id = id;
     return to;
