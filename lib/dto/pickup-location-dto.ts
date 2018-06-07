@@ -1,3 +1,4 @@
+import {AddressDto} from "./address-dto";
 import {DtoId} from "./dto-id";
 
 export class PickupLocationDto implements DtoId {
@@ -5,6 +6,7 @@ export class PickupLocationDto implements DtoId {
   public id?: number;
   public description: string;
   public addressId?: number;
+  public address?: AddressDto;
   public availableArticleIds: number[];
   public openingHourIds: number[];
 
@@ -12,6 +14,7 @@ export class PickupLocationDto implements DtoId {
     this.id = pickupLocation.id;
     this.description = pickupLocation.description;
     this.addressId = pickupLocation.addressId;
+    this.address = pickupLocation.address;
     this.availableArticleIds = pickupLocation.availableArticleIds;
     this.openingHourIds = pickupLocation.openingHourIds;
   }

@@ -1,6 +1,6 @@
 {
   "name": "citrus-common",
-  "version": "0.2.8",
+  "version": "0.2.10",
   "description": "Citrus Common Interface",
   "scripts": {
     "build": "tsc",
