@@ -1,4 +1,5 @@
 import {AddressDto} from "./address-dto";
+import {ArticleDto} from "./article-dto";
 import {DtoId} from "./dto-id";
 
 export class PickupLocationDto implements DtoId {
@@ -7,7 +8,7 @@ export class PickupLocationDto implements DtoId {
   public description: string;
   public addressId?: number;
   public address?: AddressDto;
-  public availableArticleIds: number[];
+  public availableArticles?: ArticleDto[];
   public openingHourIds: number[];
 
   constructor(pickupLocation: PickupLocationDto) {
@@ -15,7 +16,7 @@ export class PickupLocationDto implements DtoId {
     this.description = pickupLocation.description;
     this.addressId = pickupLocation.addressId;
     this.address = pickupLocation.address;
-    this.availableArticleIds = pickupLocation.availableArticleIds;
+    this.availableArticles = pickupLocation.availableArticles;
     this.openingHourIds = pickupLocation.openingHourIds;
   }
 
@@ -23,7 +24,7 @@ export class PickupLocationDto implements DtoId {
     return new PickupLocationDto({
       description: "",
       address: AddressDto.createEmpty(),
-      availableArticleIds: [],
+      availableArticles: [],
       openingHourIds: []
     });
   }
