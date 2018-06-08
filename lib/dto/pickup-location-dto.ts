@@ -22,6 +22,7 @@ export class PickupLocationDto implements DtoId {
   public static createEmpty(): PickupLocationDto {
     return new PickupLocationDto({
       description: "",
+      address: AddressDto.createEmpty(),
       availableArticleIds: [],
       openingHourIds: []
     });
