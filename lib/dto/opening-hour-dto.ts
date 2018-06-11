@@ -6,20 +6,20 @@ export class OpeningHourDto implements DtoId {
   public id?: number;
   public fromDate: Date;
   public toDate: Date;
-  public pickupLocation: PickupLocationDto;
+  public pickupLocationId?: number;
 
   constructor(openingHour: OpeningHourDto) {
     this.id = openingHour.id;
     this.fromDate = openingHour.fromDate;
     this.toDate = openingHour.toDate;
-    this.pickupLocation = openingHour.pickupLocation;
+    this.pickupLocationId = openingHour.pickupLocationId;
   }
 
   public static createEmpty(pickupLocation: PickupLocationDto): OpeningHourDto {
     return new OpeningHourDto({
       fromDate: new Date(),
       toDate: new Date(),
-      pickupLocation,
+      pickupLocationId: pickupLocation.id,
     });
   }
 
