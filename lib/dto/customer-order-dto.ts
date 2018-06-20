@@ -1,5 +1,6 @@
 import {CustomerOrderItemDto} from "./customer-order-item-dto";
 import {DtoId} from "./dto-id";
+import {PickupLocationDto} from "./pickup-location-dto";
 import {UserInfoDto} from "./user-info-dto";
 
 export class CustomerOrderDto implements DtoId {
@@ -10,6 +11,9 @@ export class CustomerOrderDto implements DtoId {
   public userId?: number;
   public user?: UserInfoDto;
   public customerOrderItems?: CustomerOrderItemDto[];
+  public pickupLocationId?: number;
+  public pickupLocation?: PickupLocationDto;
+
 
   constructor(customerOrderDto: CustomerOrderDto) {
     this.id = customerOrderDto.id;
@@ -18,6 +22,8 @@ export class CustomerOrderDto implements DtoId {
     this.userId = customerOrderDto.userId;
     this.user = customerOrderDto.user;
     this.customerOrderItems = customerOrderDto.customerOrderItems;
+    this.pickupLocationId = customerOrderDto.pickupLocationId;
+    this.pickupLocation = customerOrderDto.pickupLocation;
   }
 
   public static createEmpty(): CustomerOrderDto {
