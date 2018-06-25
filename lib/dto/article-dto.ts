@@ -9,6 +9,7 @@ export class ArticleDto implements DtoId {
   public description: string;
   public price: number;
   public stock: number;
+  public reservedInOpenOrders: number;
   public unitOfMeasurementId?: number;
   public unitOfMeasurement?: UnitOfMeasurementDto;
   public status: EArticleStatus;
@@ -21,6 +22,7 @@ export class ArticleDto implements DtoId {
     this.description = article.description;
     this.price = article.price;
     this.stock = article.stock;
+    this.reservedInOpenOrders = article.reservedInOpenOrders;
     this.unitOfMeasurementId = article.unitOfMeasurementId;
     this.unitOfMeasurement = article.unitOfMeasurement;
     this.status = article.status;
@@ -34,6 +36,7 @@ export class ArticleDto implements DtoId {
       description: "",
       price: 0,
       stock: 0,
+      reservedInOpenOrders: 0,
       status: EArticleStatus.created,
       vendorOrderItemIds: [],
       pickupLocationIds: [],
