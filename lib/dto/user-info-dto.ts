@@ -1,4 +1,5 @@
 import {DtoId} from "./dto-id";
+import {RoleDto} from "./role-dto";
 
 export class UserInfoDto implements  DtoId{
 
@@ -11,6 +12,7 @@ export class UserInfoDto implements  DtoId{
   public mobile: string;
   public addressIds: number[];
   public customerOrderIds: number[];
+  public roles?: RoleDto[];
 
   constructor(userInfo: UserInfoDto) {
     this.id = userInfo.id;
@@ -22,6 +24,7 @@ export class UserInfoDto implements  DtoId{
     this.mobile = userInfo.mobile;
     this.addressIds = userInfo.addressIds;
     this.customerOrderIds = userInfo.customerOrderIds;
+    this.roles = userInfo.roles;
   }
 
   public static createEmpty(): UserInfoDto {
@@ -33,7 +36,8 @@ export class UserInfoDto implements  DtoId{
       phone: "",
       mobile: "",
       customerOrderIds: [],
-      addressIds: []
+      addressIds: [],
+      roles: [],
     });
   }
 
