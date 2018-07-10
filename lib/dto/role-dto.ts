@@ -5,7 +5,7 @@ export class RoleDto implements DtoId {
 
   public id?: number;
   public name: string;
-  public users?: UserInfoDto;
+  public users?: UserInfoDto[];
 
   constructor(role: RoleDto) {
     this.id = role.id;
