@@ -1,3 +1,5 @@
+import {AddressDto} from "./address-dto";
+import {CustomerOrderDto} from "./customer-order-dto";
 import {DtoId} from "./dto-id";
 import {RoleDto} from "./role-dto";
 
@@ -10,8 +12,8 @@ export class UserInfoDto implements  DtoId{
   public prename: string;
   public phone: string;
   public mobile: string;
-  public addressIds: number[];
-  public customerOrderIds: number[];
+  public addresses?: AddressDto[];
+  public customerOrderes?: CustomerOrderDto[];
   public roles?: RoleDto[];
 
   constructor(userInfo: UserInfoDto) {
@@ -22,8 +24,8 @@ export class UserInfoDto implements  DtoId{
     this.prename = userInfo.prename;
     this.phone = userInfo.phone;
     this.mobile = userInfo.mobile;
-    this.addressIds = userInfo.addressIds;
-    this.customerOrderIds = userInfo.customerOrderIds;
+    this.addresses = userInfo.addresses;
+    this.customerOrderes = userInfo.customerOrderes;
     this.roles = userInfo.roles;
   }
 
@@ -35,8 +37,8 @@ export class UserInfoDto implements  DtoId{
       prename: "",
       phone: "",
       mobile: "",
-      customerOrderIds: [],
-      addressIds: [],
+      addresses: [],
+      customerOrderes: [],
       roles: [],
     });
   }
