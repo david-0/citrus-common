@@ -13,7 +13,7 @@ export class UserInfoDto implements  DtoId{
   public phone: string;
   public mobile: string;
   public addresses?: AddressDto[];
-  public customerOrderes?: CustomerOrderDto[];
+  public customerOrders?: CustomerOrderDto[];
   public roles?: RoleDto[];
 
   constructor(userInfo: UserInfoDto) {
@@ -25,7 +25,7 @@ export class UserInfoDto implements  DtoId{
     this.phone = userInfo.phone;
     this.mobile = userInfo.mobile;
     this.addresses = userInfo.addresses;
-    this.customerOrderes = userInfo.customerOrderes;
+    this.customerOrders = userInfo.customerOrders;
     this.roles = userInfo.roles;
   }
 
@@ -38,7 +38,7 @@ export class UserInfoDto implements  DtoId{
       phone: "",
       mobile: "",
       addresses: [],
-      customerOrderes: [],
+      customerOrders: [],
       roles: [],
     });
   }
