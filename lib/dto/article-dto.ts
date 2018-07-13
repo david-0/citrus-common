@@ -1,5 +1,6 @@
 import {DtoId} from "../dto/dto-id";
 import {EArticleStatus} from "../entity/e-article-status";
+import {CustomerOrderItemDto} from "./customer-order-item-dto";
 import {UnitOfMeasurementDto} from "./unit-of-measurement-dto";
 
 export class ArticleDto implements DtoId {
@@ -14,6 +15,7 @@ export class ArticleDto implements DtoId {
   public unitOfMeasurement?: UnitOfMeasurementDto;
   public status: EArticleStatus;
   public vendorOrderItemIds: number[];
+  public customerOrderItems?: CustomerOrderItemDto[];
   public pickupLocationIds: number[];
 
   constructor(article: ArticleDto) {
@@ -27,6 +29,7 @@ export class ArticleDto implements DtoId {
     this.unitOfMeasurement = article.unitOfMeasurement;
     this.status = article.status;
     this.vendorOrderItemIds = article.vendorOrderItemIds;
+    this.customerOrderItems = article.customerOrderItems;
     this.pickupLocationIds = article.pickupLocationIds;
   }
 
@@ -39,6 +42,7 @@ export class ArticleDto implements DtoId {
       reservedInOpenOrders: 0,
       status: EArticleStatus.created,
       vendorOrderItemIds: [],
+      customerOrderItems: [],
       pickupLocationIds: [],
     });
   }
