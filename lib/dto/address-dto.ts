@@ -1,4 +1,5 @@
 import {DtoId} from "../dto/dto-id";
+import {PickupLocationDto} from "./pickup-location-dto";
 import {UserInfoDto} from "./user-info-dto";
 
 export class AddressDto implements DtoId{
@@ -15,6 +16,7 @@ export class AddressDto implements DtoId{
   public zipcode: string;
   public city: string;
   public gpsLocationId?: number;
+  public pickupLocations?: PickupLocationDto[];
 
   constructor(address: AddressDto) {
     this.id = address.id;
@@ -29,6 +31,7 @@ export class AddressDto implements DtoId{
     this.zipcode = address.zipcode;
     this.city = address.city;
     this.gpsLocationId = address.gpsLocationId;
+    this.pickupLocations = address.pickupLocations;
   }
 
   public static createEmpty(): AddressDto {
@@ -42,6 +45,7 @@ export class AddressDto implements DtoId{
       addition: "",
       zipcode: "",
       city: "",
+      pickupLocations: [],
     });
   }
 
