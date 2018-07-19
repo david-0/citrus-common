@@ -21,7 +21,8 @@
     "typescript": "^2.6.1"
   },
   "devDependencies": {
-    "tslint": "^5.8.0"
+    "tslint": "^5.8.0",
+    "npm-check-updates": "2.14.2"
   },
   "main": "index.js",
   "types": "index.d.ts"
