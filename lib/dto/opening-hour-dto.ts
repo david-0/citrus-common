@@ -1,25 +1,25 @@
 import {DtoId} from "../dto/dto-id";
-import {PickupLocationDto} from "./pickup-location-dto";
+import {LocationDto} from "./location-dto";
 
 export class OpeningHourDto implements DtoId {
 
   public id?: number;
   public fromDate: Date;
   public toDate: Date;
-  public pickupLocationId?: number;
+  public localion?: LocationDto;
 
   constructor(openingHour: OpeningHourDto) {
     this.id = openingHour.id;
     this.fromDate = openingHour.fromDate;
     this.toDate = openingHour.toDate;
-    this.pickupLocationId = openingHour.pickupLocationId;
+    this.localion = openingHour.localion;
   }
 
-  public static createEmpty(pickupLocation: PickupLocationDto): OpeningHourDto {
+  public static createEmpty(location: LocationDto): OpeningHourDto {
     return new OpeningHourDto({
       fromDate: new Date(),
       toDate: new Date(),
-      pickupLocationId: pickupLocation.id,
+      localion: location,
     });
   }
 
