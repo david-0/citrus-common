@@ -1,4 +1,4 @@
 export class CartEntryDto {
-  constructor(public articleId: number, public quantity: number, public price: number) {
+  constructor(public articleStockId: number, public quantity: number, public price: number) {
   }
 }
