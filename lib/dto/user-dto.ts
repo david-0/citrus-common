@@ -3,7 +3,7 @@ import {CustomerOrderDto} from "./customer-order-dto";
 import {DtoId} from "./dto-id";
 import {RoleDto} from "./role-dto";
 
-export class UserInfoDto implements  DtoId{
+export class UserDto implements  DtoId{
 
   public id?: number;
   public number: number;
@@ -16,7 +16,7 @@ export class UserInfoDto implements  DtoId{
   public customerOrders?: CustomerOrderDto[];
   public roles?: RoleDto[];
 
-  constructor(userInfo: UserInfoDto) {
+  constructor(userInfo: UserDto) {
     this.id = userInfo.id;
     this.number = userInfo.number;
     this.email = userInfo.email;
@@ -29,8 +29,8 @@ export class UserInfoDto implements  DtoId{
     this.roles = userInfo.roles;
   }
 
-  public static createEmpty(): UserInfoDto {
-    return new UserInfoDto({
+  public static createEmpty(): UserDto {
+    return new UserDto({
       number: -1,
       email: "",
       name: "",
@@ -43,8 +43,8 @@ export class UserInfoDto implements  DtoId{
     });
   }
 
-  static createWithId(id: number, userInfo: UserInfoDto): UserInfoDto {
-    const to = new UserInfoDto(userInfo);
+  static createWithId(id: number, userInfo: UserDto): UserDto {
+    const to = new UserDto(userInfo);
     to.id = id;
     return to;
   }

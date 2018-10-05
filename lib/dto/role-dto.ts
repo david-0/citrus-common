@@ -1,11 +1,11 @@
 import {DtoId} from "./dto-id";
-import {UserInfoDto} from "./user-info-dto";
+import {UserDto} from "./user-dto";
 
 export class RoleDto implements DtoId {
 
   public id?: number;
   public name: string;
-  public users?: UserInfoDto[];
+  public users?: UserDto[];
 
   constructor(role: RoleDto) {
     this.id = role.id;

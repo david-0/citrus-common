@@ -9,7 +9,7 @@ export {LocationDto} from "./lib/dto/location-dto";
 export {OpeningHourDto} from "./lib/dto/opening-hour-dto";
 export {RoleDto} from "./lib/dto/role-dto";
 export {UnitOfMeasurementDto} from "./lib/dto/unit-of-measurement-dto";
-export {UserInfoDto} from "./lib/dto/user-info-dto";
+export {UserDto} from "./lib/dto/user-dto";
 
 export {CartDto} from "./lib/dto/cart-dto";
 export {CartEntryDto} from "./lib/dto/cart-entry-dto";

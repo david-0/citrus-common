@@ -1,7 +1,7 @@
 import {DtoId} from "../dto/dto-id";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleStockDto} from "./article-stock-dto";
-import {UserInfoDto} from "./user-info-dto";
+import {UserDto} from "./user-dto";
 
 export class ArticleCheckOutDto implements DtoId {
 
@@ -10,7 +10,7 @@ export class ArticleCheckOutDto implements DtoId {
   public quantity: number;
   public date: Date;
   public comment: string;
-  public user?: UserInfoDto;
+  public user?: UserDto;
 
   constructor(articleCheckOut: ArticleCheckOutDto) {
     this.id = articleCheckOut.id;

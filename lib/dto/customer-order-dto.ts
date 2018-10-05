@@ -1,6 +1,6 @@
 import {CustomerOrderItemDto} from "./customer-order-item-dto";
 import {DtoId} from "./dto-id";
-import {UserInfoDto} from "./user-info-dto";
+import {UserDto} from "./user-dto";
 
 export class CustomerOrderDto implements DtoId {
 
@@ -8,7 +8,7 @@ export class CustomerOrderDto implements DtoId {
   public date: Date;
   public totalPrice: number;
   public userId?: number;
-  public user?: UserInfoDto;
+  public user?: UserDto;
   public customerOrderItems?: CustomerOrderItemDto[];
 
 
