@@ -7,7 +7,6 @@ export class CustomerOrderDto implements DtoId {
   public id?: number;
   public date: Date;
   public totalPrice: number;
-  public userId?: number;
   public user?: UserDto;
   public customerOrderItems?: CustomerOrderItemDto[];
 
@@ -16,7 +15,6 @@ export class CustomerOrderDto implements DtoId {
     this.id = customerOrderDto.id;
     this.date = customerOrderDto.date;
     this.totalPrice = customerOrderDto.totalPrice;
-    this.userId = customerOrderDto.userId;
     this.user = customerOrderDto.user;
     this.customerOrderItems = customerOrderDto.customerOrderItems;
   }
