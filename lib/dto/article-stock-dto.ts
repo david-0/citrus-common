@@ -39,8 +39,8 @@ export class ArticleStockDto implements DtoId {
     });
   }
 
-  static createWithId(id: number, address: ArticleDto): ArticleDto {
-    const to = new ArticleDto(address);
+  static createWithId(id: number, articleStock: ArticleStockDto): ArticleStockDto {
+    const to = new ArticleStockDto(articleStock);
     to.id = id;
     return to;
   }
