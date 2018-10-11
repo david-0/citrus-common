@@ -8,6 +8,7 @@ export class ArticleCheckInDto implements DtoId {
   public articleStock?: ArticleStockDto;
   public quantity: number;
   public date: Date;
+  public done: boolean;
   public comment: string;
   public user?: UserDto;
 
@@ -16,16 +17,19 @@ export class ArticleCheckInDto implements DtoId {
     this.articleStock = articleCheckIn.articleStock;
     this.quantity = articleCheckIn.quantity;
     this.date = articleCheckIn.date;
+    this.done = articleCheckIn.done;
     this.comment = articleCheckIn.comment;
     this.user = articleCheckIn.user;
   }
 
-  public static createEmpty(articleStock: ArticleStockDto): ArticleCheckInDto {
+  public static createEmpty(articleStock: ArticleStockDto, user: UserDto): ArticleCheckInDto {
     return new ArticleCheckInDto({
         articleStock: articleStock,
         quantity: 0,
         date: new Date(),
         comment: "",
+        done: false,
+        user: user,
       }
     );
   }
