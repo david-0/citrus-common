@@ -32,6 +32,7 @@ export class ArticleDto implements DtoId {
       price: 0,
       inSale: false,
       articleStocks: [],
+      unitOfMeasurement: UnitOfMeasurementDto.createEmpty(),
     });
   }
 
