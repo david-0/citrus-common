@@ -27,15 +27,15 @@ export class ArticleStockDto implements DtoId {
     this.location = articleStock.location;
   }
 
-  public static createEmpty(article: ArticleDto, location: LocationDto): ArticleStockDto {
+  public static createEmpty(): ArticleStockDto {
     return new ArticleStockDto({
-      article: article,
+      article: ArticleDto.createEmpty(),
       quantity: 0,
       reservedQuantity: 0,
       checkIns: [],
       checkOuts: [],
       customerOrderItems: [],
-      location: location,
+      location: LocationDto.createEmpty(),
     });
   }
 

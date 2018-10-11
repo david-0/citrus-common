@@ -15,11 +15,11 @@ export class OpeningHourDto implements DtoId {
     this.location = openingHour.location;
   }
 
-  public static createEmpty(location: LocationDto): OpeningHourDto {
+  public static createEmpty(): OpeningHourDto {
     return new OpeningHourDto({
       fromDate: new Date(),
       toDate: new Date(),
-      location: location,
+      location: LocationDto.createEmpty(),
     });
   }
 

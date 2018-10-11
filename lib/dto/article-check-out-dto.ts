@@ -22,14 +22,14 @@ export class ArticleCheckOutDto implements DtoId {
     this.user = articleCheckOut.user;
   }
 
-  public static createEmpty(articleStock: ArticleStockDto, user: UserDto): ArticleCheckOutDto {
+  public static createEmpty(): ArticleCheckOutDto {
     return new ArticleCheckOutDto({
-        articleStock: articleStock,
+        articleStock: ArticleStockDto.createEmpty(),
         quantity: 0,
         date: new Date(),
         done: false,
         comment: "",
-        user: user,
+        user: UserDto.createEmpty(),
       }
     );
   }
