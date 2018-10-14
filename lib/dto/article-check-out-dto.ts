@@ -10,7 +10,7 @@ export class ArticleCheckOutDto implements DtoId {
   public plannedDate: Date;
   public done: boolean;
   public comment: string;
-  public user?: UserDto;
+  public doneUser?: UserDto;
 
   constructor(articleCheckOut: ArticleCheckOutDto) {
     this.id = articleCheckOut.id;
@@ -19,7 +19,7 @@ export class ArticleCheckOutDto implements DtoId {
     this.plannedDate = articleCheckOut.plannedDate;
     this.done = articleCheckOut.done;
     this.comment = articleCheckOut.comment;
-    this.user = articleCheckOut.user;
+    this.doneUser = articleCheckOut.doneUser;
   }
 
   public static createEmpty(): ArticleCheckOutDto {
@@ -29,7 +29,7 @@ export class ArticleCheckOutDto implements DtoId {
         plannedDate: new Date(),
         done: false,
         comment: "",
-        user: UserDto.createEmpty(),
+        doneUser: UserDto.createEmpty(),
       }
     );
   }
