@@ -31,7 +31,6 @@ export class ArticleCheckInDto implements DtoId {
         plannedDate: new Date(),
         comment: "",
         done: false,
-        doneUser: UserDto.createEmpty(),
       }
     );
   }
