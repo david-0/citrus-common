@@ -8,8 +8,9 @@ export class ArticleCheckInDto implements DtoId {
   public articleStock?: ArticleStockDto;
   public quantity: number;
   public plannedDate: Date;
-  public done: boolean;
   public comment: string;
+  public done: boolean;
+  public doneDate?: Date;
   public doneUser?: UserDto;
 
   constructor(articleCheckIn: ArticleCheckInDto) {
@@ -17,8 +18,9 @@ export class ArticleCheckInDto implements DtoId {
     this.articleStock = articleCheckIn.articleStock;
     this.quantity = articleCheckIn.quantity;
     this.plannedDate = articleCheckIn.plannedDate;
-    this.done = articleCheckIn.done;
     this.comment = articleCheckIn.comment;
+    this.done = articleCheckIn.done;
+    this.doneDate = articleCheckIn.doneDate;
     this.doneUser = articleCheckIn.doneUser;
   }
 
