@@ -7,7 +7,7 @@ export class ArticleCheckOutDto implements DtoId {
   public id?: number;
   public articleStock?: ArticleStockDto;
   public quantity: number;
-  public date: Date;
+  public plannedDate: Date;
   public done: boolean;
   public comment: string;
   public user?: UserDto;
@@ -16,7 +16,7 @@ export class ArticleCheckOutDto implements DtoId {
     this.id = articleCheckOut.id;
     this.articleStock = articleCheckOut.articleStock;
     this.quantity = articleCheckOut.quantity;
-    this.date = articleCheckOut.date;
+    this.plannedDate = articleCheckOut.plannedDate;
     this.done = articleCheckOut.done;
     this.comment = articleCheckOut.comment;
     this.user = articleCheckOut.user;
@@ -26,7 +26,7 @@ export class ArticleCheckOutDto implements DtoId {
     return new ArticleCheckOutDto({
         articleStock: ArticleStockDto.createEmpty(),
         quantity: 0,
-        date: new Date(),
+        plannedDate: new Date(),
         done: false,
         comment: "",
         user: UserDto.createEmpty(),
