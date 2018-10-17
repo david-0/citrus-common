@@ -2,7 +2,7 @@ import {DtoId} from "../dto/dto-id";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {ArticleDto} from "./article-dto";
-import {CustomerOrderItemDto} from "./customer-order-item-dto";
+import {OrderItemDto} from "./order-item-dto";
 import {LocationDto} from "./location-dto";
 
 export class ArticleStockDto implements DtoId {
@@ -13,7 +13,7 @@ export class ArticleStockDto implements DtoId {
   public reservedQuantity: number;
   public checkIns?: ArticleCheckInDto[];
   public checkOuts?: ArticleCheckOutDto[];
-  public customerOrderItems?: CustomerOrderItemDto[];
+  public customerOrderItems?: OrderItemDto[];
   public location: LocationDto;
 
   constructor(articleStock: ArticleStockDto) {

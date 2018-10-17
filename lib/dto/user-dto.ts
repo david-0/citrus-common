@@ -1,7 +1,7 @@
 import {AddressDto} from "./address-dto";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
-import {CustomerOrderDto} from "./customer-order-dto";
+import {OrderDto} from "./order-dto";
 import {DtoId} from "./dto-id";
 import {RoleDto} from "./role-dto";
 
@@ -15,7 +15,7 @@ export class UserDto implements  DtoId{
   public phone: string;
   public mobile: string;
   public addresses?: AddressDto[];
-  public customerOrders?: CustomerOrderDto[];
+  public customerOrders?: OrderDto[];
   public articleCheckIns?: ArticleCheckInDto[];
   public articleCheckOuts?: ArticleCheckOutDto[];
   public roles?: RoleDto[];

@@ -1,9 +1,6 @@
-import {CartEntryDto} from "./cart-entry-dto";
-import {DtoId} from "./dto-id";
+import {CartLocationDto} from "./cart-location-dto";
 
-export class CartDto implements DtoId {
-  constructor(
-    public cartEntries: CartEntryDto[],
-    public id?: number) {
+export class CartDto {
+  constructor(public cartLocations: CartLocationDto[]) {
   }
 }
