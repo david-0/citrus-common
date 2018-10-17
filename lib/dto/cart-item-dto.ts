@@ -1,4 +1,6 @@
+import {ArticleDto} from "./article-dto";
+
 export class CartItemDto {
-  constructor(public articleId: number, public quantity: number, public price: number) {
+  constructor(public article: ArticleDto, public quantity: number, public price: number) {
   }
 }
