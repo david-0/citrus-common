@@ -13,7 +13,7 @@ export class ArticleStockDto implements DtoId {
   public reservedQuantity: number;
   public checkIns?: ArticleCheckInDto[];
   public checkOuts?: ArticleCheckOutDto[];
-  public customerOrderItems?: OrderItemDto[];
+  public orderItems?: OrderItemDto[];
   public location: LocationDto;
 
   constructor(articleStock: ArticleStockDto) {
@@ -23,7 +23,7 @@ export class ArticleStockDto implements DtoId {
     this.reservedQuantity = articleStock.reservedQuantity;
     this.checkIns = articleStock.checkIns;
     this.checkOuts = articleStock.checkOuts;
-    this.customerOrderItems = articleStock.customerOrderItems;
+    this.orderItems = articleStock.orderItems;
     this.location = articleStock.location;
   }
 
@@ -34,7 +34,7 @@ export class ArticleStockDto implements DtoId {
       reservedQuantity: 0,
       checkIns: [],
       checkOuts: [],
-      customerOrderItems: [],
+      orderItems: [],
       location: LocationDto.createEmpty(),
     });
   }

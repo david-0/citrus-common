@@ -1,4 +1,5 @@
 import {DtoId} from "./dto-id";
+import {LocationDto} from "./location-dto";
 import {OpeningHourDto} from "./opening-hour-dto";
 import {OrderDto} from "./order-dto";
 import {OrderItemDto} from "./order-item-dto";
@@ -6,6 +7,7 @@ import {OrderItemDto} from "./order-item-dto";
 export class OrderLocationDto implements DtoId {
   public id?: number;
   public order?: OrderDto;
+  public location?: LocationDto;
   public orderItems?: OrderItemDto[];
   public totalLocationPrice: number;
   public plannedCheckout?: OpeningHourDto;
@@ -16,6 +18,7 @@ export class OrderLocationDto implements DtoId {
   constructor(orderLocation: OrderLocationDto) {
     this.id = orderLocation.id;
     this.order = orderLocation.order;
+    this.location = orderLocation.location;
     this.orderItems = orderLocation.orderItems;
     this.totalLocationPrice = orderLocation.totalLocationPrice;
     this.plannedCheckout = orderLocation.plannedCheckout;
