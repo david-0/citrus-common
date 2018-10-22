@@ -1,6 +1,12 @@
-import {CartLocationDto} from "./cart-location-dto";
+import {CartItemDto} from "./cart-item-dto";
+import {LocationDto} from "./location-dto";
+import {OpeningHourDto} from "./opening-hour-dto";
 
 export class CartDto {
-  constructor(public cartLocations: CartLocationDto[], public totalPrice: number) {
+  public cartItems: CartItemDto[];
+  public openingHourOfPlannedCheckout?: OpeningHourDto;
+
+  constructor(public location: LocationDto, public totalPrice: number) {
+    this.cartItems = [];
   }
 }

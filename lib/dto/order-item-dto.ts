@@ -1,6 +1,6 @@
 import {ArticleDto} from "./article-dto";
 import {DtoId} from "./dto-id";
-import {OrderLocationDto} from "./order-location-dto";
+import {OrderDto} from "./order-dto";
 
 export class OrderItemDto implements DtoId {
 
@@ -8,11 +8,11 @@ export class OrderItemDto implements DtoId {
   public article: ArticleDto;
   public copiedPrice: number;
   public quantity: number;
-  public orderLocation?: OrderLocationDto;
+  public order?: OrderDto;
 
   constructor(orderItem: OrderItemDto) {
     this.id = orderItem.id;
-    this.orderLocation = orderItem.orderLocation;
+    this.order = orderItem.order;
     this.article = orderItem.article;
     this.copiedPrice = orderItem.copiedPrice;
     this.quantity = orderItem.quantity;
@@ -23,7 +23,7 @@ export class OrderItemDto implements DtoId {
       article: ArticleDto.createEmpty(),
       copiedPrice: 0,
       quantity: 0,
-      orderLocation: OrderLocationDto.createEmpty(),
+      order: OrderDto.createEmpty(),
     });
   }
 

@@ -1,34 +1,38 @@
 import {DtoId} from "./dto-id";
-import {OrderLocationDto} from "./order-location-dto";
+import {OpeningHourDto} from "./opening-hour-dto";
+import {OrderItemDto} from "./order-item-dto";
 import {UserDto} from "./user-dto";
 
 export class OrderDto implements DtoId {
 
   public id?: number;
   public date: Date;
-  public totalPrice: number;
   public user?: UserDto;
-  public orderLocations?: OrderLocationDto[];
-  public completed: boolean;
-  public completedDate?: Date;
-  public completingUser?: UserDto;
+  public orderItems?: OrderItemDto[];
+  public totalPrice: number;
+  public plannedCheckout?: OpeningHourDto;
+  public checkedOut: boolean;
+  public checkedOutDate?: Date;
+  public checkingOutUser?: UserDto;
+
 
   constructor(order: OrderDto) {
     this.id = order.id;
     this.date = order.date;
-    this.totalPrice = order.totalPrice;
     this.user = order.user;
-    this.orderLocations = order.orderLocations;
-    this.completed = order.completed;
-    this.completedDate = order.completedDate;
-    this.completingUser = order.completingUser;
+    this.orderItems = order.orderItems;
+    this.totalPrice = order.totalPrice;
+    this.plannedCheckout = order.plannedCheckout;
+    this.checkedOut = order.checkedOut;
+    this.checkedOutDate = order.checkedOutDate;
+    this.checkingOutUser = order.checkingOutUser;
   }
 
   public static createEmpty(): OrderDto {
     return new OrderDto({
       date: new Date(),
       totalPrice: 0,
-      completed: false,
+      checkedOut: false,
     });
   }
 
