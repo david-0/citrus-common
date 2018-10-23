@@ -1,6 +1,6 @@
 {
   "name": "citrus-common",
-  "version": "0.4.8",
+  "version": "0.4.10",
   "description": "Citrus Common Interface",
   "scripts": {
     "build": "tsc",
@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/david-0/citrus-common#readme",
   "dependencies": {
-    "typescript": "^2.9.2"
+    "typescript": "^3.1.3"
   },
   "devDependencies": {
     "tslint": "^5.11.0",
-    "npm-check-updates": "2.14.2"
+    "npm-check-updates": "^2.14.2"
   },
   "main": "index.js",
   "types": "index.d.ts"
