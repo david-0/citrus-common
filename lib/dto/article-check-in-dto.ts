@@ -6,7 +6,7 @@ export class ArticleCheckInDto implements DtoId {
 
   public id?: number;
   public articleStock?: ArticleStockDto;
-  public quantity: number;
+  public quantity?  : number;
   public plannedDate: Date;
   public comment: string;
   public done: boolean;
@@ -27,7 +27,6 @@ export class ArticleCheckInDto implements DtoId {
   public static createEmpty(): ArticleCheckInDto {
     return new ArticleCheckInDto({
         articleStock: ArticleStockDto.createEmpty(),
-        quantity: 0,
         plannedDate: new Date(),
         comment: "",
         done: false,
