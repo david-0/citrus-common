@@ -15,7 +15,8 @@ export class UserDto implements  DtoId{
   public phone: string;
   public mobile: string;
   public addresses?: AddressDto[];
-  public customerOrders?: OrderDto[];
+  public orders?: OrderDto[];
+  public ordersCheckingOutUser?: OrderDto[];
   public articleCheckIns?: ArticleCheckInDto[];
   public articleCheckOuts?: ArticleCheckOutDto[];
   public roles?: RoleDto[];
@@ -29,7 +30,8 @@ export class UserDto implements  DtoId{
     this.phone = userInfo.phone;
     this.mobile = userInfo.mobile;
     this.addresses = userInfo.addresses;
-    this.customerOrders = userInfo.customerOrders;
+    this.orders = userInfo.orders;
+    this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
     this.articleCheckIns = userInfo.articleCheckIns;
     this.articleCheckOuts = userInfo.articleCheckOuts;
     this.roles = userInfo.roles;
@@ -44,7 +46,8 @@ export class UserDto implements  DtoId{
       phone: "",
       mobile: "",
       addresses: [],
-      customerOrders: [],
+      orders: [],
+      ordersCheckingOutUser: [],
       articleCheckIns: [],
       articleCheckOuts: [],
       roles: [],
