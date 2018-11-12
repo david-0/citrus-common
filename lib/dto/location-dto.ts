@@ -42,8 +42,8 @@ export class LocationDto implements DtoId {
     });
   }
 
-  static createWithId(id: number, pickupLocation: LocationDto): LocationDto {
-    const to = new LocationDto(pickupLocation);
+  static createWithId(id: number, location: LocationDto): LocationDto {
+    const to = new LocationDto(location);
     to.id = id;
     return to;
   }
