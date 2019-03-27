@@ -7,7 +7,7 @@ export class ArticleDto implements DtoId {
   public id?: number;
   public number: number;
   public description: string;
-  public pictureId: string;
+  public imageId: string;
   public price: number;
   public inSale: boolean;
   public unitOfMeasurement?: UnitOfMeasurementDto;
@@ -17,7 +17,7 @@ export class ArticleDto implements DtoId {
     this.id = article.id;
     this.number = article.number;
     this.description = article.description;
-    this.pictureId = article.pictureId;
+    this.imageId = article.imageId;
     this.price = article.price;
     this.inSale = article.inSale;
     this.unitOfMeasurement = article.unitOfMeasurement;
@@ -28,7 +28,7 @@ export class ArticleDto implements DtoId {
     return new ArticleDto({
       number: 0,
       description: "",
-      pictureId: "",
+      imageId: "",
       price: 0,
       inSale: false,
       articleStocks: [],
