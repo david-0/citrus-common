@@ -1,11 +1,11 @@
 import {AddressDto} from "./address-dto";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
-import {OrderDto} from "./order-dto";
 import {DtoId} from "./dto-id";
+import {OrderDto} from "./order-dto";
 import {RoleDto} from "./role-dto";
 
-export class UserDto implements  DtoId{
+export class UserDto implements DtoId {
 
   public id?: number;
   public number: number;

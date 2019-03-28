@@ -1,9 +1,9 @@
-import {DtoId} from "../dto/dto-id";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {ArticleDto} from "./article-dto";
-import {OrderItemDto} from "./order-item-dto";
+import {DtoId} from "./dto-id";
 import {LocationDto} from "./location-dto";
+import {OrderItemDto} from "./order-item-dto";
 
 export class ArticleStockDto implements DtoId {
 
@@ -18,7 +18,7 @@ export class ArticleStockDto implements DtoId {
 
   constructor(articleStock: ArticleStockDto) {
     this.id = articleStock.id;
-    this.article= articleStock.article;
+    this.article = articleStock.article;
     this.quantity = articleStock.quantity;
     this.reservedQuantity = articleStock.reservedQuantity;
     this.checkIns = articleStock.checkIns;

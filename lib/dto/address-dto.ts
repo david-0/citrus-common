@@ -1,7 +1,7 @@
-import {DtoId} from "../dto/dto-id";
+import {DtoId} from "./dto-id";
 import {UserDto} from "./user-dto";
 
-export class AddressDto implements DtoId{
+export class AddressDto implements DtoId {
 
   public id?: number;
   public user?: UserDto;

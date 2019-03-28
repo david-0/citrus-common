@@ -1,12 +1,12 @@
-import {DtoId} from "../dto/dto-id";
 import {ArticleStockDto} from "./article-stock-dto";
+import {DtoId} from "./dto-id";
 import {UserDto} from "./user-dto";
 
 export class ArticleCheckInDto implements DtoId {
 
   public id?: number;
   public articleStock?: ArticleStockDto;
-  public quantity?  : number;
+  public quantity?: number;
   public plannedDate: Date;
   public comment: string;
   public done: boolean;

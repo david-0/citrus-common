@@ -1,5 +1,5 @@
-import {DtoId} from "../dto/dto-id";
 import {ArticleStockDto} from "./article-stock-dto";
+import {DtoId} from "./dto-id";
 import {UserDto} from "./user-dto";
 
 export class ArticleCheckOutDto implements DtoId {

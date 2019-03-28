@@ -1,4 +1,4 @@
-import {DtoId} from "../dto/dto-id";
+import {DtoId} from "./dto-id";
 import {LocationDto} from "./location-dto";
 
 export class OpeningHourDto implements DtoId {
