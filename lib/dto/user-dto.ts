@@ -8,12 +8,10 @@ import {RoleDto} from "./role-dto";
 export class UserDto implements DtoId {
 
   public id?: number;
-  public number: number;
   public email: string;
   public name: string;
   public prename: string;
   public phone: string;
-  public mobile: string;
   public addresses?: AddressDto[];
   public orders?: OrderDto[];
   public ordersCheckingOutUser?: OrderDto[];
@@ -23,12 +21,10 @@ export class UserDto implements DtoId {
 
   constructor(userInfo: UserDto) {
     this.id = userInfo.id;
-    this.number = userInfo.number;
     this.email = userInfo.email;
     this.name = userInfo.name;
     this.prename = userInfo.prename;
     this.phone = userInfo.phone;
-    this.mobile = userInfo.mobile;
     this.addresses = userInfo.addresses;
     this.orders = userInfo.orders;
     this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
@@ -39,12 +35,10 @@ export class UserDto implements DtoId {
 
   public static createEmpty(): UserDto {
     return new UserDto({
-      number: -1,
       email: "",
       name: "",
       prename: "",
       phone: "",
-      mobile: "",
       addresses: [],
       orders: [],
       ordersCheckingOutUser: [],

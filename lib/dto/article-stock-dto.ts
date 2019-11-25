@@ -11,6 +11,7 @@ export class ArticleStockDto implements DtoId {
   public article?: ArticleDto;
   public quantity: number;
   public reservedQuantity: number;
+  public soldOut: boolean;
   public checkIns?: ArticleCheckInDto[];
   public checkOuts?: ArticleCheckOutDto[];
   public orderItems?: OrderItemDto[];
@@ -21,6 +22,7 @@ export class ArticleStockDto implements DtoId {
     this.article = articleStock.article;
     this.quantity = articleStock.quantity;
     this.reservedQuantity = articleStock.reservedQuantity;
+    this.soldOut = articleStock.soldOut;
     this.checkIns = articleStock.checkIns;
     this.checkOuts = articleStock.checkOuts;
     this.orderItems = articleStock.orderItems;
@@ -32,6 +34,7 @@ export class ArticleStockDto implements DtoId {
       article: ArticleDto.createEmpty(),
       quantity: 0,
       reservedQuantity: 0,
+      soldOut: false,
       checkIns: [],
       checkOuts: [],
       orderItems: [],
