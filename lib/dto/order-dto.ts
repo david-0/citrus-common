@@ -36,6 +36,7 @@ export class OrderDto implements DtoId {
     return new OrderDto({
       date: new Date(),
       totalPrice: 0,
+      comment: "", 
       checkedOut: false,
       location: LocationDto.createEmpty(),
     });
