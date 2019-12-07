@@ -6,7 +6,7 @@ export class CartDto {
   public cartItems: CartItemDto[];
   public openingHourOfPlannedCheckout?: OpeningHourDto;
 
-  constructor(public location: LocationDto, public totalPrice: number) {
+  constructor(public location: LocationDto, public totalPrice: number, public comment: string) {
     this.cartItems = [];
   }
 }
