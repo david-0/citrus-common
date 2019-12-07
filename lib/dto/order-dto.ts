@@ -10,6 +10,7 @@ export class OrderDto implements DtoId {
   public date: Date;
   public user?: UserDto;
   public location?: LocationDto;
+  public comment: string;
   public orderItems?: OrderItemDto[];
   public totalPrice: number;
   public plannedCheckout?: OpeningHourDto;
@@ -22,6 +23,7 @@ export class OrderDto implements DtoId {
     this.date = order.date;
     this.user = order.user;
     this.location = order.location;
+    this.comment = order.comment;
     this.orderItems = order.orderItems;
     this.totalPrice = order.totalPrice;
     this.plannedCheckout = order.plannedCheckout;
