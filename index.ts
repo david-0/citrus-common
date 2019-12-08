@@ -16,3 +16,4 @@ export {CartDto} from "./lib/dto/cart-dto";
 export {CartItemDto} from "./lib/dto/cart-item-dto";
 
 export {OrderArchiveDto} from "./lib/dto/order-archive-dto";
+export {MessageDto} from "./lib/dto/message-dto";
