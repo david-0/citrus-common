@@ -10,6 +10,7 @@ export class ArticleDto implements DtoId {
   public imageId: string;
   public price: number;
   public inSale: boolean;
+  public saleUnit: number;
   public unitOfMeasurement?: UnitOfMeasurementDto;
   public articleStocks?: ArticleStockDto[];
 
@@ -20,6 +21,7 @@ export class ArticleDto implements DtoId {
     this.imageId = article.imageId;
     this.price = article.price;
     this.inSale = article.inSale;
+    this.saleUnit = article.saleUnit;
     this.unitOfMeasurement = article.unitOfMeasurement;
     this.articleStocks = article.articleStocks;
   }
@@ -31,6 +33,7 @@ export class ArticleDto implements DtoId {
       imageId: "",
       price: 0,
       inSale: false,
+      saleUnit: 1,
       articleStocks: [],
       unitOfMeasurement: UnitOfMeasurementDto.createEmpty(),
     });
