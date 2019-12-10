@@ -6,6 +6,6 @@ export class MessageDto implements DtoId {
   public sendDate?: Date;
   public sendUser?: UserDto;
   public responses?: string;
-  constructor(public subject: string, public message: string, public receivers: UserDto[]) {
+  constructor(public subject: string, public content: string, public receivers: UserDto[]) {
   }
 }
