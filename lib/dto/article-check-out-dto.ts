@@ -1,8 +1,8 @@
 import {ArticleStockDto} from "./article-stock-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {UserDto} from "./user-dto";
 
-export class ArticleCheckOutDto implements DtoId {
+export class ArticleCheckOutDto implements IDtoId {
 
   public id?: number;
   public articleStock?: ArticleStockDto;
@@ -12,17 +12,6 @@ export class ArticleCheckOutDto implements DtoId {
   public done: boolean;
   public doneDate?: Date;
   public doneUser?: UserDto;
-
-  constructor(articleCheckOut: ArticleCheckOutDto) {
-    this.id = articleCheckOut.id;
-    this.articleStock = articleCheckOut.articleStock;
-    this.quantity = articleCheckOut.quantity;
-    this.plannedDate = articleCheckOut.plannedDate;
-    this.comment = articleCheckOut.comment;
-    this.done = articleCheckOut.done;
-    this.doneDate = articleCheckOut.doneDate;
-    this.doneUser = articleCheckOut.doneUser;
-  }
 
   public static createEmpty(): ArticleCheckOutDto {
     return new ArticleCheckOutDto({
@@ -39,5 +28,16 @@ export class ArticleCheckOutDto implements DtoId {
     const to = new ArticleCheckOutDto(articleCheckInDto);
     to.id = id;
     return to;
+  }
+
+  constructor(articleCheckOut: ArticleCheckOutDto) {
+    this.id = articleCheckOut.id;
+    this.articleStock = articleCheckOut.articleStock;
+    this.quantity = articleCheckOut.quantity;
+    this.plannedDate = articleCheckOut.plannedDate;
+    this.comment = articleCheckOut.comment;
+    this.done = articleCheckOut.done;
+    this.doneDate = articleCheckOut.doneDate;
+    this.doneUser = articleCheckOut.doneUser;
   }
 }

@@ -1,22 +1,14 @@
 import {ArticleDto} from "./article-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {OrderDto} from "./order-dto";
 
-export class OrderItemDto implements DtoId {
+export class OrderItemDto implements IDtoId {
 
   public id?: number;
   public article: ArticleDto;
   public copiedPrice: number;
   public quantity: number;
   public order?: OrderDto;
-
-  constructor(orderItem: OrderItemDto) {
-    this.id = orderItem.id;
-    this.order = orderItem.order;
-    this.article = orderItem.article;
-    this.copiedPrice = orderItem.copiedPrice;
-    this.quantity = orderItem.quantity;
-  }
 
   public static createEmpty(): OrderItemDto {
     return new OrderItemDto({
@@ -31,5 +23,13 @@ export class OrderItemDto implements DtoId {
     const to = new OrderItemDto(orderItem);
     to.id = id;
     return to;
+  }
+
+  constructor(orderItem: OrderItemDto) {
+    this.id = orderItem.id;
+    this.order = orderItem.order;
+    this.article = orderItem.article;
+    this.copiedPrice = orderItem.copiedPrice;
+    this.quantity = orderItem.quantity;
   }
 }

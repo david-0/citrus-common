@@ -1,8 +1,8 @@
 import {ArticleStockDto} from "./article-stock-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {UnitOfMeasurementDto} from "./unit-of-measurement-dto";
 
-export class ArticleDto implements DtoId {
+export class ArticleDto implements IDtoId {
 
   public id?: number;
   public number: number;
@@ -13,18 +13,6 @@ export class ArticleDto implements DtoId {
   public saleUnit: number;
   public unitOfMeasurement?: UnitOfMeasurementDto;
   public articleStocks?: ArticleStockDto[];
-
-  constructor(article: ArticleDto) {
-    this.id = article.id;
-    this.number = article.number;
-    this.description = article.description;
-    this.imageId = article.imageId;
-    this.price = article.price;
-    this.inSale = article.inSale;
-    this.saleUnit = article.saleUnit;
-    this.unitOfMeasurement = article.unitOfMeasurement;
-    this.articleStocks = article.articleStocks;
-  }
 
   public static createEmpty(): ArticleDto {
     return new ArticleDto({
@@ -43,5 +31,17 @@ export class ArticleDto implements DtoId {
     const to = new ArticleDto(article);
     to.id = id;
     return to;
+  }
+
+  constructor(article: ArticleDto) {
+    this.id = article.id;
+    this.number = article.number;
+    this.description = article.description;
+    this.imageId = article.imageId;
+    this.price = article.price;
+    this.inSale = article.inSale;
+    this.saleUnit = article.saleUnit;
+    this.unitOfMeasurement = article.unitOfMeasurement;
+    this.articleStocks = article.articleStocks;
   }
 }

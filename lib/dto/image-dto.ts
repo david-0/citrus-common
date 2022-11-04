@@ -1,9 +1,9 @@
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 
-export class ImageDto implements DtoId {
+export class ImageDto implements IDtoId {
 
   public id?: number;
-  public contentType: String;
+  public contentType: string;
   public image: Blob;
 
   constructor(imageDto: ImageDto) {

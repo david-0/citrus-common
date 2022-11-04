@@ -1,11 +1,11 @@
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {ArticleDto} from "./article-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {LocationDto} from "./location-dto";
 import {OrderItemDto} from "./order-item-dto";
 
-export class ArticleStockDto implements DtoId {
+export class ArticleStockDto implements IDtoId {
 
   public id?: number;
   public article?: ArticleDto;
@@ -16,18 +16,6 @@ export class ArticleStockDto implements DtoId {
   public checkOuts?: ArticleCheckOutDto[];
   public orderItems?: OrderItemDto[];
   public location: LocationDto;
-
-  constructor(articleStock: ArticleStockDto) {
-    this.id = articleStock.id;
-    this.article = articleStock.article;
-    this.quantity = articleStock.quantity;
-    this.reservedQuantity = articleStock.reservedQuantity;
-    this.soldOut = articleStock.soldOut;
-    this.checkIns = articleStock.checkIns;
-    this.checkOuts = articleStock.checkOuts;
-    this.orderItems = articleStock.orderItems;
-    this.location = articleStock.location;
-  }
 
   public static createEmpty(): ArticleStockDto {
     return new ArticleStockDto({
@@ -46,5 +34,17 @@ export class ArticleStockDto implements DtoId {
     const to = new ArticleStockDto(articleStock);
     to.id = id;
     return to;
+  }
+
+  constructor(articleStock: ArticleStockDto) {
+    this.id = articleStock.id;
+    this.article = articleStock.article;
+    this.quantity = articleStock.quantity;
+    this.reservedQuantity = articleStock.reservedQuantity;
+    this.soldOut = articleStock.soldOut;
+    this.checkIns = articleStock.checkIns;
+    this.checkOuts = articleStock.checkOuts;
+    this.orderItems = articleStock.orderItems;
+    this.location = articleStock.location;
   }
 }

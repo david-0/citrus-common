@@ -1,3 +1,3 @@
-export interface DtoId {
+export interface IDtoId {
   id?: number;
 }

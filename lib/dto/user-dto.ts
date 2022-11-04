@@ -1,11 +1,11 @@
 import {AddressDto} from "./address-dto";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {OrderDto} from "./order-dto";
 import {RoleDto} from "./role-dto";
 
-export class UserDto implements DtoId {
+export class UserDto implements IDtoId {
 
   public id?: number;
   public email: string;
@@ -18,20 +18,6 @@ export class UserDto implements DtoId {
   public articleCheckIns?: ArticleCheckInDto[];
   public articleCheckOuts?: ArticleCheckOutDto[];
   public roles?: RoleDto[];
-
-  constructor(userInfo: UserDto) {
-    this.id = userInfo.id;
-    this.email = userInfo.email;
-    this.name = userInfo.name;
-    this.prename = userInfo.prename;
-    this.phone = userInfo.phone;
-    this.addresses = userInfo.addresses;
-    this.orders = userInfo.orders;
-    this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
-    this.articleCheckIns = userInfo.articleCheckIns;
-    this.articleCheckOuts = userInfo.articleCheckOuts;
-    this.roles = userInfo.roles;
-  }
 
   public static createEmpty(): UserDto {
     return new UserDto({
@@ -52,5 +38,19 @@ export class UserDto implements DtoId {
     const to = new UserDto(userInfo);
     to.id = id;
     return to;
+  }
+
+  constructor(userInfo: UserDto) {
+    this.id = userInfo.id;
+    this.email = userInfo.email;
+    this.name = userInfo.name;
+    this.prename = userInfo.prename;
+    this.phone = userInfo.phone;
+    this.addresses = userInfo.addresses;
+    this.orders = userInfo.orders;
+    this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
+    this.articleCheckIns = userInfo.articleCheckIns;
+    this.articleCheckOuts = userInfo.articleCheckOuts;
+    this.roles = userInfo.roles;
   }
 }

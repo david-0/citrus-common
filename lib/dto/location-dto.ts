@@ -1,8 +1,8 @@
 import {ArticleStockDto} from "./article-stock-dto";
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {OpeningHourDto} from "./opening-hour-dto";
 
-export class LocationDto implements DtoId {
+export class LocationDto implements IDtoId {
 
   public id?: number;
   public comment: string;
@@ -14,19 +14,6 @@ export class LocationDto implements DtoId {
   public description: string;
   public availableArticleStocks?: ArticleStockDto[];
   public openingHours?: OpeningHourDto[];
-
-  constructor(location: LocationDto) {
-    this.id = location.id;
-    this.comment = location.comment;
-    this.street = location.street;
-    this.number = location.number;
-    this.addition = location.addition;
-    this.zipcode = location.zipcode;
-    this.city = location.city;
-    this.description = location.description;
-    this.availableArticleStocks = location.availableArticleStocks;
-    this.openingHours = location.openingHours;
-  }
 
   public static createEmpty(): LocationDto {
     return new LocationDto({
@@ -46,5 +33,18 @@ export class LocationDto implements DtoId {
     const to = new LocationDto(location);
     to.id = id;
     return to;
+  }
+
+  constructor(location: LocationDto) {
+    this.id = location.id;
+    this.comment = location.comment;
+    this.street = location.street;
+    this.number = location.number;
+    this.addition = location.addition;
+    this.zipcode = location.zipcode;
+    this.city = location.city;
+    this.description = location.description;
+    this.availableArticleStocks = location.availableArticleStocks;
+    this.openingHours = location.openingHours;
   }
 }

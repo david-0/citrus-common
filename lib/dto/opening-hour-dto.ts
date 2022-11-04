@@ -1,19 +1,12 @@
-import {DtoId} from "./dto-id";
+import {IDtoId} from "./dto-id";
 import {LocationDto} from "./location-dto";
 
-export class OpeningHourDto implements DtoId {
+export class OpeningHourDto implements IDtoId {
 
   public id?: number;
   public fromDate: Date;
   public toDate: Date;
   public location?: LocationDto;
-
-  constructor(openingHour: OpeningHourDto) {
-    this.id = openingHour.id;
-    this.fromDate = openingHour.fromDate;
-    this.toDate = openingHour.toDate;
-    this.location = openingHour.location;
-  }
 
   public static createEmpty(): OpeningHourDto {
     return new OpeningHourDto({
@@ -27,5 +20,12 @@ export class OpeningHourDto implements DtoId {
     const to = new OpeningHourDto(openingHour);
     to.id = id;
     return to;
+  }
+
+  constructor(openingHour: OpeningHourDto) {
+    this.id = openingHour.id;
+    this.fromDate = openingHour.fromDate;
+    this.toDate = openingHour.toDate;
+    this.location = openingHour.location;
   }
 }

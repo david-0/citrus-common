@@ -4,7 +4,7 @@
   "description": "Citrus Common Interface",
   "scripts": {
     "build": "tsc",
-    "lint": "tslint .",
+    "lint": "tslint --project .",
     "prepare": "npm run build"
   },
   "repository": {
