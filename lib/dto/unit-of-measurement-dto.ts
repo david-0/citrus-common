@@ -1,5 +1,5 @@
 import {ArticleDto} from "./article-dto";
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 
 export class UnitOfMeasurementDto implements IDtoId {
 

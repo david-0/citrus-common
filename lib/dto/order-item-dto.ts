@@ -1,5 +1,5 @@
 import {ArticleDto} from "./article-dto";
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 import {OrderDto} from "./order-dto";
 
 export class OrderItemDto implements IDtoId {

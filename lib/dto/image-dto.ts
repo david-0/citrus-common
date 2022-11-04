@@ -1,4 +1,4 @@
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 
 export class ImageDto implements IDtoId {
 

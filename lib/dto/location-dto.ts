@@ -1,5 +1,5 @@
 import {ArticleStockDto} from "./article-stock-dto";
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 import {OpeningHourDto} from "./opening-hour-dto";
 
 export class LocationDto implements IDtoId {

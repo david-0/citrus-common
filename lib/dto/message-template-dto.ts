@@ -1,10 +1,12 @@
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 
 export class MessageTemplateDto implements IDtoId {
   public id?: number;
+  public subject: string;
+  public content: string;
 
-  public static createEmpty(): MessagetTemplateDto {
-    return new MessagetTemplateDto({
+  public static createEmpty(): MessageTemplateDto {
+    return new MessageTemplateDto({
       subject: "",
       content: "",
     });
@@ -16,10 +18,7 @@ export class MessageTemplateDto implements IDtoId {
     return to;
   }
 
-  constructor(public subject: string, public content: string) {    
-  }
-
-  constructor(messageTemplate: MessageTemplateDto) {
+  public constructor(messageTemplate: MessageTemplateDto) {
     this.id = messageTemplate.id;
     this.subject = messageTemplate.subject;
     this.content = messageTemplate.content;

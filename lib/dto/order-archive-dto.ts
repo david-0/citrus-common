@@ -1,4 +1,4 @@
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 import {OrderDto} from "./order-dto";
 import {UserDto} from "./user-dto";
 

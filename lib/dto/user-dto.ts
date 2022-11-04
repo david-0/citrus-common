@@ -1,7 +1,7 @@
 import {AddressDto} from "./address-dto";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 import {OrderDto} from "./order-dto";
 import {RoleDto} from "./role-dto";
 

@@ -1,4 +1,4 @@
-import {IDtoId} from "./dto-id";
+import {IDtoId} from "./i-dto-id";
 import {LocationDto} from "./location-dto";
 import {OpeningHourDto} from "./opening-hour-dto";
 import {OrderItemDto} from "./order-item-dto";
