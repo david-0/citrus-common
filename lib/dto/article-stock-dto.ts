@@ -12,6 +12,7 @@ export class ArticleStockDto implements IDtoId {
   public quantity: number;
   public reservedQuantity: number;
   public soldOut: boolean;
+  public visible: boolean;
   public checkIns?: ArticleCheckInDto[];
   public checkOuts?: ArticleCheckOutDto[];
   public orderItems?: OrderItemDto[];
@@ -23,6 +24,7 @@ export class ArticleStockDto implements IDtoId {
       quantity: 0,
       reservedQuantity: 0,
       soldOut: false,
+      visible: false,
       checkIns: [],
       checkOuts: [],
       orderItems: [],
@@ -42,6 +44,7 @@ export class ArticleStockDto implements IDtoId {
     this.quantity = articleStock.quantity;
     this.reservedQuantity = articleStock.reservedQuantity;
     this.soldOut = articleStock.soldOut;
+    this.visible = articleStock.visible;
     this.checkIns = articleStock.checkIns;
     this.checkOuts = articleStock.checkOuts;
     this.orderItems = articleStock.orderItems;
