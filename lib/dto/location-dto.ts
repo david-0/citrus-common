@@ -12,7 +12,7 @@ export class LocationDto implements IDtoId {
   public zipcode: string;
   public city: string;
   public description: string;
-  public availableArticleStocks?: ArticleStockDto[];
+  public articleStocks?: ArticleStockDto[];
   public openingHours?: OpeningHourDto[];
 
   public static createEmpty(): LocationDto {
@@ -24,7 +24,7 @@ export class LocationDto implements IDtoId {
       zipcode: "",
       city: "",
       description: "",
-      availableArticleStocks: [],
+      articleStocks: [],
       openingHours: []
     });
   }
@@ -44,7 +44,7 @@ export class LocationDto implements IDtoId {
     this.zipcode = location.zipcode;
     this.city = location.city;
     this.description = location.description;
-    this.availableArticleStocks = location.availableArticleStocks;
+    this.articleStocks = location.articleStocks;
     this.openingHours = location.openingHours;
   }
 }
