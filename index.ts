@@ -10,7 +10,6 @@ export {OrderItemDto} from "./lib/dto/order-item-dto";
 export {RoleDto} from "./lib/dto/role-dto";
 export {UnitOfMeasurementDto} from "./lib/dto/unit-of-measurement-dto";
 export {UserDto} from "./lib/dto/user-dto";
-export {ImageDto} from "./lib/dto/image-dto";
 
 export {CartDto} from "./lib/dto/cart-dto";
 export {CartItemDto} from "./lib/dto/cart-item-dto";

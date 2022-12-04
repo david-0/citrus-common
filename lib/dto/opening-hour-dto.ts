@@ -1,5 +1,5 @@
-import {IDtoId} from "./i-dto-id";
-import {LocationDto} from "./location-dto";
+import { IDtoId } from "./i-dto-id";
+import { LocationDto } from "./location-dto";
 
 export class OpeningHourDto implements IDtoId {
 
