@@ -1,4 +1,3 @@
-import {AddressDto} from "./address-dto";
 import {ArticleCheckInDto} from "./article-check-in-dto";
 import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {IDtoId} from "./i-dto-id";
@@ -12,7 +11,6 @@ export class UserDto implements IDtoId {
   public name: string;
   public prename: string;
   public phone: string;
-  public addresses?: AddressDto[];
   public orders?: OrderDto[];
   public ordersCheckingOutUser?: OrderDto[];
   public articleCheckIns?: ArticleCheckInDto[];
@@ -25,7 +23,6 @@ export class UserDto implements IDtoId {
       name: "",
       prename: "",
       phone: "",
-      addresses: [],
       orders: [],
       ordersCheckingOutUser: [],
       articleCheckIns: [],
@@ -46,7 +43,6 @@ export class UserDto implements IDtoId {
     this.name = userInfo.name;
     this.prename = userInfo.prename;
     this.phone = userInfo.phone;
-    this.addresses = userInfo.addresses;
     this.orders = userInfo.orders;
     this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
     this.articleCheckIns = userInfo.articleCheckIns;

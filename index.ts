@@ -1,4 +1,3 @@
-export {AddressDto} from "./lib/dto/address-dto";
 export {ArticleDto} from "./lib/dto/article-dto";
 export {ArticleCheckInDto} from "./lib/dto/article-check-in-dto";
 export {ArticleCheckOutDto} from "./lib/dto/article-check-out-dto";
