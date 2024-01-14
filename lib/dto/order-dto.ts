@@ -14,9 +14,6 @@ export class OrderDto implements IDtoId {
     public orderItems?: OrderItemDto[];
     public totalPrice: number;
     public plannedCheckout?: OpeningHourDto;
-    public checkedOut: boolean;
-    public checkedOutDate?: Date;
-    public checkingOutUser?: UserDto;
     public deliveryNoteCreated?: Date;
 
     public static createEmpty(): OrderDto {
@@ -24,7 +21,6 @@ export class OrderDto implements IDtoId {
             date: new Date(),
             totalPrice: 0,
             comment: "",
-            checkedOut: false,
             location: LocationDto.createEmpty(),
         });
     }
@@ -44,9 +40,6 @@ export class OrderDto implements IDtoId {
         this.orderItems = order.orderItems;
         this.totalPrice = order.totalPrice;
         this.plannedCheckout = order.plannedCheckout;
-        this.checkedOut = order.checkedOut;
-        this.checkedOutDate = order.checkedOutDate;
-        this.checkingOutUser = order.checkingOutUser;
         this.deliveryNoteCreated = order.deliveryNoteCreated;
     }
 }
