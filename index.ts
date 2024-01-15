@@ -1,6 +1,4 @@
 export {ArticleDto} from "./lib/dto/article-dto";
-export {ArticleCheckInDto} from "./lib/dto/article-check-in-dto";
-export {ArticleCheckOutDto} from "./lib/dto/article-check-out-dto";
 export {ArticleStockDto} from "./lib/dto/article-stock-dto";
 export {LocationDto} from "./lib/dto/location-dto";
 export {OpeningHourDto} from "./lib/dto/opening-hour-dto";
