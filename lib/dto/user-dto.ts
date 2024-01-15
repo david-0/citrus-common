@@ -1,5 +1,3 @@
-import {ArticleCheckInDto} from "./article-check-in-dto";
-import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {IDtoId} from "./i-dto-id";
 import {OrderDto} from "./order-dto";
 import {RoleDto} from "./role-dto";
@@ -13,8 +11,6 @@ export class UserDto implements IDtoId {
   public phone: string;
   public orders?: OrderDto[];
   public ordersCheckingOutUser?: OrderDto[];
-  public articleCheckIns?: ArticleCheckInDto[];
-  public articleCheckOuts?: ArticleCheckOutDto[];
   public roles?: RoleDto[];
 
   public static createEmpty(): UserDto {
@@ -25,8 +21,6 @@ export class UserDto implements IDtoId {
       phone: "",
       orders: [],
       ordersCheckingOutUser: [],
-      articleCheckIns: [],
-      articleCheckOuts: [],
       roles: [],
     });
   }
@@ -45,8 +39,6 @@ export class UserDto implements IDtoId {
     this.phone = userInfo.phone;
     this.orders = userInfo.orders;
     this.ordersCheckingOutUser = userInfo.ordersCheckingOutUser;
-    this.articleCheckIns = userInfo.articleCheckIns;
-    this.articleCheckOuts = userInfo.articleCheckOuts;
     this.roles = userInfo.roles;
   }
 }

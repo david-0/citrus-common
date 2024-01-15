@@ -1,5 +1,3 @@
-import {ArticleCheckInDto} from "./article-check-in-dto";
-import {ArticleCheckOutDto} from "./article-check-out-dto";
 import {ArticleDto} from "./article-dto";
 import {IDtoId} from "./i-dto-id";
 import {LocationDto} from "./location-dto";
@@ -13,8 +11,6 @@ export class ArticleStockDto implements IDtoId {
   public reservedQuantity: number;
   public soldOut: boolean;
   public visible: boolean;
-  public checkIns?: ArticleCheckInDto[];
-  public checkOuts?: ArticleCheckOutDto[];
   public orderItems?: OrderItemDto[];
   public location: LocationDto;
 
@@ -25,8 +21,6 @@ export class ArticleStockDto implements IDtoId {
       reservedQuantity: 0,
       soldOut: false,
       visible: false,
-      checkIns: [],
-      checkOuts: [],
       orderItems: [],
       location: LocationDto.createEmpty(),
     });
@@ -45,8 +39,6 @@ export class ArticleStockDto implements IDtoId {
     this.reservedQuantity = articleStock.reservedQuantity;
     this.soldOut = articleStock.soldOut;
     this.visible = articleStock.visible;
-    this.checkIns = articleStock.checkIns;
-    this.checkOuts = articleStock.checkOuts;
     this.orderItems = articleStock.orderItems;
     this.location = articleStock.location;
   }
